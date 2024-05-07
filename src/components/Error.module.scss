@@ -1,0 +1,40 @@
+@use 'src/assets/styles/base' as *;
+
+.wrap {
+  width: 100%;
+  color: $color-white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: rem(16);
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+
+  .title {
+    font-size: rem(48);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: rem(47);
+    margin: auto;
+    display: block;
+  }
+  .subTitle {
+    position: relative;
+    font-size: rem(24);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: rem(12);
+    display: block;
+    margin: auto;
+  }
+  .subText {
+    font-size: rem(15);
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    margin-top: rem(10);
+  }
+}

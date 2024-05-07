@@ -1,0 +1,26 @@
+@forward 'vendor/normalize';
+@forward 'fonts';
+@forward 'typography';
+
+@use 'variables' as *;
+@use 'functions' as *;
+@use 'colors' as *;
+
+html,
+body {
+  width: $fullWidth;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Averta PE';
+  height: $fullHeight;
+  margin: 0;
+  background: $color-black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,32 @@
+@use '../assets/styles/base' as *;
+
+.helpModalContent {
+  position: relative;
+
+  .title {
+    max-width: rem(250);
+    font-size: rem(18);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: rem(20);
+    padding-bottom: rem(20);
+    display: flex;
+    letter-spacing: 0;
+  }
+
+  ol {
+    width: 100%;
+    margin: 0;
+    padding-left: rem(20);
+
+    li {
+      font-size: rem(15);
+      font-weight: 700;
+      padding-right: rem(20);
+      padding-bottom: rem(20);
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

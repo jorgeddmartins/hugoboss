@@ -1,0 +1,52 @@
+@use 'src/assets/styles/base' as *;
+
+.fallback {
+  position: relative;
+  width: 100%;
+  color: $color-white;
+  background: $color-black;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: none;
+  @include breakpoint(desktop) {
+    display: flex;
+    z-index: 2;
+  }
+
+  .qrContent {
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(40);
+  }
+
+  .qrBorder {
+    background: white;
+    padding: rem(16);
+  }
+
+  .title {
+    width: 100%;
+    font-size: rem(48);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: rem(47);
+    margin: auto;
+    display: block;
+  }
+  .subTitle {
+    font-size: rem(15);
+    font-weight: 700;
+    text-align: center;
+    padding-top: rem(20);
+    display: block;
+  }
+}
+
+.mobile {
+  display: block;
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}

@@ -1,0 +1,100 @@
+@use 'src/assets/styles/base' as *;
+
+.wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: rem(16);
+  box-sizing: border-box;
+
+  .topParagraph {
+    font-size: rem(15);
+    font-weight: 300;
+    margin-top: rem(0);
+    margin-bottom: rem(20);
+    padding-right: rem(30);
+  }
+  ol {
+    padding-left: rem(30);
+    padding-right: rem(30);
+    margin: 0;
+    li {
+      font-size: rem(15);
+      font-weight: 300;
+      padding: 0 0 rem(17) rem(5);
+      &::marker {
+        font-weight: 700;
+      }
+    }
+    .contentTitle {
+      position: relative;
+      left: rem(-22);
+      font-size: rem(18);
+      font-weight: 800;
+      text-transform: uppercase;
+      display: flex;
+      margin-bottom: rem(17);
+    }
+    .space {
+      display: block;
+      margin-top: rem(20);
+    }
+  }
+
+  .closeBtn {
+    position: absolute;
+    right: rem(26);
+    top: rem(33);
+  }
+
+  .scrollWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    font-size: 0;
+    background: $color-white;
+    padding: rem(58) rem(28) rem(20) rem(25);
+    box-sizing: border-box;
+
+    .title {
+      color: $color-black;
+      font-size: rem(18);
+      font-weight: 800;
+      text-transform: uppercase;
+      padding-bottom: rem(20);
+      display: flex;
+      letter-spacing: 0;
+      margin-top: rem(-28);
+    }
+  }
+  .scrollBar {
+    width: 100%;
+    height: 96%;
+    color: $color-black;
+    overflow-y: auto;
+  }
+
+  .gradientTop,
+  .gradientBottom {
+    position: absolute;
+    width: 100%;
+    height: rem(100);
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .gradientTop {
+    top: rem(72);
+  }
+  .gradientBottom {
+    bottom: rem(20);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+}

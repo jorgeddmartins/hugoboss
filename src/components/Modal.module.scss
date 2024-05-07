@@ -1,0 +1,89 @@
+@use '../assets/styles/base' as *;
+
+@include keyframes(outfit) {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+
+  &.help {
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(17);
+    box-sizing: border-box;
+
+    .contentWrap {
+      position: relative;
+      width: 100%;
+      padding: rem(25);
+      background: $color-white;
+      box-sizing: border-box;
+      .closeBtn {
+        top: rem(25);
+        right: rem(25);
+      }
+    }
+  }
+  &.cookies {
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: rem(17);
+    box-sizing: border-box;
+    .contentWrap {
+      position: relative;
+      width: 100%;
+      min-height: rem(70);
+      max-height: 100%;
+      background: $color-white;
+      padding: rem(17);
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+  }
+  &.outfit {
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contentWrap {
+      position: relative;
+      width: rem(265);
+      height: rem(313);
+      background: $color-white;
+      animation: 0.5s outfit forwards;
+      .closeBtn {
+        right: rem(16);
+        top: rem(16);
+      }
+    }
+  }
+  .closeBtn {
+    position: absolute;
+    right: rem(20);
+    top: rem(30);
+    z-index: 1;
+  }
+}

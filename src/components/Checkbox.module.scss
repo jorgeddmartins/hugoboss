@@ -1,0 +1,47 @@
+@use 'src/assets/styles/base' as *;
+
+.wrap {
+  position: relative;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    display: none;
+
+    &:checked ~ .checkMark {
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  .checkMark {
+    &::after {
+      left: rem(9);
+      top: rem(4);
+      width: rem(5);
+      height: rem(10);
+      border: solid $color-black;
+      border-width: 0 rem(3) rem(3) 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.checkMark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: rem(24);
+  width: rem(24);
+  border: 1px solid $color-black;
+  background: $color-white;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+}

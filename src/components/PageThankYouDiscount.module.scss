@@ -1,0 +1,77 @@
+@use 'src/assets/styles/base' as *;
+
+.fullscreen {
+  width: 100%;
+  height: 100%;
+}
+.textDisplay {
+  text-transform: uppercase;
+  display: block;
+}
+
+.wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/img/thankyou.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  .sectionFrame {
+    @extend .fullscreen;
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 59.81%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .contentWrap {
+      color: $color-white;
+      text-align: center;
+      padding: 0 rem(17) rem(100) rem(17);
+
+      p {
+        width: rem(300);
+        font-size: rem(18);
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: rem(12);
+        display: block;
+      }
+    }
+    .bigTitle {
+      position: relative;
+      width: rem(250);
+      margin: auto;
+      font-size: rem(36);
+      font-weight: 800;
+      line-height: rem(33);
+      text-shadow: 0 0 rem(20) rgba(0, 0, 0, 0.5);
+      @extend .textDisplay;
+      margin-bottom: rem(17);
+    }
+  }
+}
+
+.barCode {
+  margin-top: rem(20);
+  margin-bottom: rem(15);
+}
+
+.countDown,
+.countDownTitle {
+  font-size: rem(15);
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+}
+.countDownTitle {
+  margin-bottom: rem(3);
+}
+.countDown {
+  margin-bottom: rem(20);
+}

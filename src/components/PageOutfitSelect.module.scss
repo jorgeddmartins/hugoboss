@@ -1,0 +1,75 @@
+@use 'src/assets/styles/base' as *;
+
+.fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  position: absolute;
+  @extend .fullscreen;
+  background: linear-gradient(147.67deg, #646464 -0.8%, #282828 120.25%);
+  color: $color-white;
+  padding: rem(70) rem(16) 0 rem(16);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: rem(18);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    padding-bottom: rem(8);
+  }
+  .subTitle {
+    font-size: rem(15);
+    font-weight: 700;
+    display: block;
+    margin: auto;
+    text-align: center;
+    line-height: rem(20);
+  }
+  .contentWrap {
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(14);
+    box-sizing: border-box;
+    flex: 1;
+
+    .blkContent {
+      flex: 1;
+      width: 100%;
+      margin-bottom: rem(15);
+
+      .blkTitle {
+        font-size: rem(16);
+        font-weight: 700;
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+      }
+    }
+    .btnBox {
+      width: 100%;
+      padding: rem(15) 0;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.swipeText {
+  position: absolute;
+  width: 100%;
+  font-size: rem(15);
+  font-weight: 700;
+  color: $color-black;
+  text-align: center;
+  bottom: rem(17);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}

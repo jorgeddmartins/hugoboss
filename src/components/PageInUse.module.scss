@@ -1,0 +1,38 @@
+@use '../assets/styles/base' as *;
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $color-black;
+  color: $color-white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: rem(15);
+  h1,
+  .subTitle,
+  .message {
+    font-weight: 800;
+  }
+  h1 {
+    font-size: rem(48);
+    letter-spacing: rem(-1);
+    text-transform: uppercase;
+    margin-bottom: rem(-6);
+  }
+  .subTitle {
+    width: 100%;
+    max-width: rem(225);
+    text-align: center;
+    font-size: rem(24);
+    text-transform: uppercase;
+    line-height: rem(25);
+  }
+  .message {
+    font-size: rem(15);
+    text-align: center;
+  }
+}

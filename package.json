@@ -1,0 +1,62 @@
+{
+  "name": "hb-web-regent-st",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "build:analyze": "ANALYZE=true npm run build",
+    "export": "npm run build && next export",
+    "dev": "next dev",
+    "lint": "next lint",
+    "prettier": "prettier --config --write \"{src,pages}/**/*.{js,jsx,json,graphql,ts,tsx,css,scss}\"",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^12.3.1",
+    "@sentry/react": "^7.17.3",
+    "@sentry/webpack-plugin": "^1.20.0",
+    "buffer": "^6.0.3",
+    "classnames": "^2.3.2",
+    "date-fns": "^2.29.3",
+    "mqtt": "^4.3.7",
+    "mqtt-pattern": "^2.0.0",
+    "next": "13.1.2",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-qr-code": "^2.0.11",
+    "react-use": "^17.4.0",
+    "sass": "^1.57.1",
+    "swiper": "^8.4.6",
+    "url": "^0.11.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
+    "@types/node": "18t.7.5",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "@types/styled-components": "^5.1.24",
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "express": "^4.18.2",
+    "express-force-https": "^1.0.0",
+    "file-loader": "^6.2.0",
+    "husky": "^8.0.1",
+    "image-size": "^1.0.2",
+    "lint-staged": "^13.0.2",
+    "node-fetch": "^3.3.0",
+    "prettier": "^2.7.1",
+    "raw-loader": "^4.0.2",
+    "slugify": "^1.6.5",
+    "typescript": "4.7.4",
+    "url-loader": "^4.1.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,ts,tsx,graphql,css,scss}": [
+      "prettier --config --write"
+    ]
+  }
+}
